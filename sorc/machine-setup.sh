@@ -118,6 +118,10 @@ elif [[ -d /lustre && -d /ncrc ]] ; then
     fi
     target=gaea
     module purge
+elif [[ -d /data/prod ]] ; then
+    # We are on SSEC S4
+    target=s4
+    module purge
 else
     echo WARNING: UNKNOWN PLATFORM 1>&2
 fi
